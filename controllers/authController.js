@@ -4,7 +4,7 @@ import Joi from "joi";
 import bcrypt from "bcrypt";
 import { sendEmail } from "../services/ses.js";
 
-export const register = async (req, res) => {
+export const registerUsers = async (req, res) => {
   const connection = await sqldb.getConnection();
   try {
     const registerSchema = Joi.object({

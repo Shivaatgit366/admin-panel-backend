@@ -1,6 +1,6 @@
 import express from "express";
 import {
-  register,
+  registerUsers,
   login,
   logout,
   refreshToken,
@@ -14,7 +14,7 @@ import { authenticateToken } from "../middlewares/auth.js";
 const router = express.Router();
 
 //group
-router.post("/register", register);
+router.post("/register", registerUsers);
 router.post("/login", login);
 router.post("/logout", authenticateToken, logout);
 router.post("/refresh-token", refreshToken);
